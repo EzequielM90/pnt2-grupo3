@@ -45,6 +45,7 @@
       <table class ="table">
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Nombre y Apellido</th>
                 <th>DNI</th>
                 <th>Puesto</th>
@@ -54,6 +55,7 @@
         </thead>
         <tbody>
             <tr v-for="employee in employees" :key="employee.id">
+                <td>{{ employee.id }} </td>
                 <td>{{ employee.nombre }} {{ " " }} {{ employee.apellido }}</td>
                 <td>{{ employee.dni }} </td>
                 <td>{{ employee.puesto }} </td>

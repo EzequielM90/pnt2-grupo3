@@ -10,6 +10,7 @@ const router = createRouter({
     { path: '/horarios', name: 'horarios', component: () => import('../views/HorariosView.vue'),},
     { path: '/informes', name: 'informes', component: () => import('../views/InformesView.vue'),},
     { path: '/configuracion', name: 'configuracion', component: () => import('../views/ConfiguracionView.vue'),},
+    { path: '/login', name: 'login', component: () => import('../views/LoginView.vue'),},
     { path: '/createEmployee', component: EmployeesForm},
     { path: '/editEmployee/:id', component: EmployeesForm}
   ],

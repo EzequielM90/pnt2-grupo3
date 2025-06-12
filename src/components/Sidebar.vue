@@ -20,6 +20,9 @@
         </li>       
         <li class="nav-item mb-2">
           <router-link class="nav-link text-white" to="/configuracion">Configuración</router-link>
+        </li>
+        <li>
+          <router-link class="nav-link text-white" to="/login">Login</router-link>
         </li> 
       </ul>
     </nav>

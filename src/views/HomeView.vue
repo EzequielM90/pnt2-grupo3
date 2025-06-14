@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import BarChart from './GraficoAusencias.vue';
+  import BarChart from './GraficoAusencias.vue';
 </script>

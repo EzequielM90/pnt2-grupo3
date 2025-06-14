@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="text-xl font-bold mb-4">Ausencias de los últimos 7 días</h2>
+    <h4 class="text-xl font-bold mb-4">Ausencias de los últimos 7 días</h4>
     <Bar v-if="chartData" :data="chartData" :options="chartOptions" />
     <p v-else>Cargando datos...</p>
   </div>

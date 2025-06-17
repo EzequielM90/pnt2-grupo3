@@ -23,6 +23,7 @@ defineProps({
     default: 'primary' // Bootstrap: primary, danger, success, warning, etc.
   }
 })
+
 </script>
 
 <style scoped>

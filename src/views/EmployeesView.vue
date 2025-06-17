@@ -1,10 +1,25 @@
 <script setup>
-    import {onMounted, ref} from "vue"
+    import {onMounted, ref, computed} from "vue"
     import {useRouter} from "vue-router"
     import {getEmployees, deleteEmployee} from '../servicios/personalServicios.js'
+    import Paginacion from '../components/Paginacion.vue';
 
     const employees = ref([])
     const router = useRouter()
+
+    const empleadosPorPágina = 10
+    const inicio = ref(0)
+    const fin = ref(empleadosPorPágina)
+
+    const next = () => {
+    inicio.value += empleadosPorPágina
+    fin.value += empleadosPorPágina
+  }
+
+    const previous = () => {
+    inicio.value -= empleadosPorPágina
+    fin.value -= empleadosPorPágina
+  }
 
     onMounted(() => {
         obtenerEmpleados()
@@ -37,15 +52,26 @@
         }
     }
 
+    const maxLength = computed (() => employees.value.length)
+
 </script>
 
 <template>
     <div class ="container mt-4">
       <h1 class="text-center flex-grow-1">Listado de Empleados</h1>
+
+        <Paginacion 
+        @next = "next" 
+        @previous = "previous"
+        :inicio ="inicio"
+        :fin = "fin"
+        :maxLength="maxLength"
+        class="mb-2"></Paginacion>
+
       <table class ="table">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Empleado ID</th>
                 <th>Nombre y Apellido</th>
                 <th>DNI</th>
                 <th>Puesto</th>
@@ -54,7 +80,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="employee in employees" :key="employee.id">
+            <tr v-for="employee in employees.slice(inicio, fin)" :key="employee.id">
                 <td>{{ employee.id }} </td>
                 <td>{{ employee.nombre }} {{ " " }} {{ employee.apellido }}</td>
                 <td>{{ employee.dni }} </td>

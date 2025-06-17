@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import EmployeesForm from '../components/EmployeesForm.vue'
+import FichadasForm from '../components/FichadasForm.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,7 +14,9 @@ const router = createRouter({
     { path: '/configuracion', name: 'configuracion', component: () => import('../views/ConfiguracionView.vue'),},
     { path: '/login', name: 'login', component: () => import('../views/LoginView.vue'),},
     { path: '/createEmployee', component: EmployeesForm},
-    { path: '/editEmployee/:id', component: EmployeesForm}
+    { path: '/editEmployee/:id', component: EmployeesForm},
+    { path: '/createFichada', component: FichadasForm },
+    { path: '/editFichada/:id', component: FichadasForm}
   ],
 })
 

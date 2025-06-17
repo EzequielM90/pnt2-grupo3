@@ -21,7 +21,7 @@ const obtenerFichadas = async ({ empleadoId } = {}) => {
       return fechaB - fechaA;
     });
 
-    fichadas.value = ordenadas.slice(0, 5); //  Mostrar solo las 5 más recientes
+    fichadas.value = ordenadas.slice(0, 3); //  Mostrar solo las 3 más recientes
   } catch (error) {
     console.error("Error en listado de fichadas", error);
   }

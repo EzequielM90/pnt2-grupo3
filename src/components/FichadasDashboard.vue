@@ -31,7 +31,7 @@ const obtenerFichadas = async ({ empleadoId } = {}) => {
 
 <template>
   <div class="container mt-4">
-    <h4 class="text-center mb-4">Últimas fichadas</h4> <!--  Título agregado -->
+    <h4 class="text-center mb-4">Últimas fichadas</h4> 
 
     <table class="table">
       <thead>

@@ -14,7 +14,7 @@ const obtenerFichadas = async ({ empleadoId } = {}) => {
   try {
     const response = empleadoId ? await getFichadas(empleadoId) : await getFichadas();
 
-    //  Ordenar por fecha y hora (descendente) y limitar a 5
+    //  Ordenar por fecha y hora (descendente) y limitar a 3
     const ordenadas = response.data.sort((a, b) => {
       const fechaA = new Date(a.fecha.split("/").reverse().join("-") + 'T' + a.horaEntrada);
       const fechaB = new Date(b.fecha.split("/").reverse().join("-") + 'T' + b.horaEntrada);

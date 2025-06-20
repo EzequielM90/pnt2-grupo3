@@ -15,7 +15,7 @@
         <TarjetaResumen :cantidad="ausentes" texto="Ausencias" color="warning" />
       </div>
       <div class="col-md-4">
-        <TarjetaResumen cantidad="-" texto="Fichajes fuera de horario" color="secondary" />
+        <TarjetaResumen cantidad="#" texto="Ranking ausencias" color="secondary" />
       </div>
     </div>
   </div>
@@ -66,3 +66,5 @@ padding-bottom: 3%;
   margin-top: 50px; /* o el valor que prefieras */
 }
 </style>
+
+

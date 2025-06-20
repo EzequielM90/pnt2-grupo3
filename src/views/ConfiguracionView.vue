@@ -1,11 +1,11 @@
 <script setup>
-
+  import AdministradorDashboard from '@/components/AdministradorDashboard.vue';
 </script>
 
 <template>
   <main>
-    <div class ="d-flex justify-content-center align-items-center vh-100">
-      <h1 class = "text-success text-center">Configuracion</h1>
+    <div class ="d-flex justify-content-center mt-5 vh-100">
+      <AdministradorDashboard></AdministradorDashboard>
     </div>
     
   </main>

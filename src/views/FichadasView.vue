@@ -28,7 +28,7 @@
   const obtenerFichadas = async ({empleadoId} = {} ) => {
     try{
       const response = empleadoId ? await getFichadas(empleadoId) : await getFichadas()
-      fichadas.value = response.data
+      fichadas.value = response.data.sort((a, b) => b.id - a.id)
     } catch(error){
       console.error("Error en listado de fichadas", error)
     }

@@ -15,7 +15,7 @@ onMounted(async () => {
 
 <template>
   <main class="container mt-4">
-    <h1 class="text-success text-center mb-4">Informes</h1>
+    <h1 class="text-center mb-4">Informes</h1>
 
     <h4 class="text-center mb-3">Ranking de empleados con más ausencias (últimos 7 días hábiles)</h4>
 

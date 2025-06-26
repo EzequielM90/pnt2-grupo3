@@ -13,7 +13,7 @@ const getAusenciasPorFecha = async () => {
   const hoy = new Date();
   console.log(hoy)
   const hace7Dias = new Date();
-  hace7Dias.setDate(hoy.getDate() - 7); // últimos 7 días incluyendo hoy
+  hace7Dias.setDate(hoy.getDate() - 6); // últimos 7 días incluyendo hoy
 
   // Traer datos
   const [empleadosResponse, fichadasResponse] = await Promise.all([

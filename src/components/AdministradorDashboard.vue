@@ -7,6 +7,7 @@
 
     const logout = () => {
         autenticacionStore.logout()
+        localStorage.clear()
         router.push('/login')
     }
 

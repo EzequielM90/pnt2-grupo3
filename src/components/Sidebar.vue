@@ -10,7 +10,7 @@
         </li>
 
         <!-- Visible solo para ADMIN -->
-        <template v-if="esAdmin">
+        <template v-if="autenticacionStore.esAdministrador">
           <li class="nav-item mb-2">
             <router-link class="nav-link text-white" to="/fichadas">Fichadas</router-link>
           </li>
@@ -39,11 +39,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { useAutenticacionStore } from '@/store/autenticacion'
 
-
-const rol = localStorage.getItem('rol')
-const esAdmin = ref(rol === 'admin')
+const autenticacionStore = useAutenticacionStore()
 </script>
 
 <style scoped>
